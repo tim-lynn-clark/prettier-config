@@ -3,21 +3,34 @@
 
 ## Usage
 
-**Install**:
+### Install:
 
 ```bash
-$ npm install @tim-lynn-clark/prettier-config --save-dev
+$ npm install @schleichermann/prettier-config --save-dev
 ```
 
 ```bash
-$ yarn add --dev @tim-lynn-clark/prettier-config
+$ yarn add --dev @schleichermann/prettier-config
 ```
 
-**Edit `package.json`**:
+### Config Setup:
+
+Two options for setup in your project.
+
+**Option 1: Edit `package.json`**
 
 ```jsonc
 {
   // ...
-  "prettier": "@tim-lynn-clark/prettier-config"
+  "prettier": "@schleichermann/prettier-config"
 }
+```
+
+**Option 2: Edit `.prettierrc.js`**
+
+```javascript
+module.exports = {
+  ...require("@schleichermann/prettier-config"),
+  semi: false,
+};
 ```
